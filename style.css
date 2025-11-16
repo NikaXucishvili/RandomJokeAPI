@@ -1,36 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: black;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
 }
 
+/* Card container */
 .container {
-    height: 100%;
-    background: red;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
+/* Heading */
 .container h1 {
-    font-size: 25px;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
 }
 
-button{
+/* Joke text */
+#joke {
+    font-size: 1.2rem;
+    color: #555;
+    min-height: 50px; /* Prevent layout jump */
+}
+
+
+button {
+    width: 150px;
+    margin: 0 auto;
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.05);
+}
+
+/* Responsive text */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .container h1 {
+        font-size: 1.2rem;
+    }
+
+    #joke {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }
